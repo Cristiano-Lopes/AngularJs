@@ -3,172 +3,99 @@
 <head>
 <meta http-equiv="Content-Tye" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<script type="text/javascript" src="resources/script/angular.min.js"></script>
-<script type="text/javascript" src="resources/script/primeiroController.js"></script>
-<script type="text/javascript" src="resources/script/angular-route.js"></script>
-<script type="text/javascript" src="resources/script/angular-resource.js"></script>
-<script type="text/javascript" src="resources/script/angular-animate.js"></script>
-<script type="text/javascript" src="resources/script/angular-locale_pt-br.js"></script>
+<script type="text/javascript" src="resources/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="resources/js/angular.min.js"></script>
+<script type="text/javascript" src="resources/js/angular-route.js"></script>
+<script type="text/javascript" src="resources/js/angular-resource.js"></script>
+<script type="text/javascript" src="resources/js/angular-animate.js"></script>
+<script type="text/javascript" src="resources/js/angular-locale_pt-br.js"></script>
+
+<script type="text/javascript" src="resources/js/bootstrap-checkbox-radio.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap-notify.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/chartist.min.js"></script>
+<script type="text/javascript" src="resources/js/demo.js"></script>
+<script type="text/javascript" src="resources/js/paper-dashboard.js"></script>
+
+<link href="resources/css/animate.min.css" rel="stylesheet"/>
+<link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="resources/css/demo.css" rel="stylesheet"/>
+<link href="resources/css/paper-dashboard.css" rel="stylesheet"/>
+<link href="resources/css/themify-icons.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="resources/js/app.js"></script>
 </head>
+
 <body id="corpo">
-<!-- 	<div ng-controller="personCtrl"> -->
-<!-- 		<p>O nome é {{ firstName | uppercase }}</p> -->
-<!-- 		<p>O nome é {{ lstName | lowercase}}</p> -->
-<!-- 	</div> -->
 
-<!-- 	<div ng-controller="costCtrl"> -->
-<!-- 		<h1>Preço: {{ (price * 20) | currency }}</h1> -->
-<!-- 	</div> -->
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
 	
-<!-- 	<div ng-controller="namesCtrl2"> -->
-<!-- 		<ul> -->
-<!-- 			<li ng-repeat="x in names | filter : 'e'">{{ x }}</li> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
-			
-<!-- 	<div ng-controller="namesCtrl3"> -->
-<!-- 		<p> -->
-<!-- 			<input type="text" ng-model="test"> -->
-<!-- 		</p> -->
+		<div class="sidebar-wrapper">
+			<ul class="nav">
+				<li class="active">
+					<a href="#clientelist">
+						<p>Clientes</p>					
+					</a>
+				</li>
+				
+				<li>
+					<a href="user.html">
+						<p>User Profiles</p>					
+					</a>
+				</li>
+				
+				<li>
+					<a href="table.html">
+						<p>Table List</p>					
+					</a>
+				</li>
+				
+				<li>
+					<a href="typography.html">
+						<p>Typography</p>					
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="main-panel">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Home</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<p>Cadastros</p>
+								<b class="caret"></b>
+							</a>
+							
+							<ul class="dropdown-menu">
+								<li><a href="#">Notification 1</a></li>
+								<li><a href="#">Notification 2</a></li>
+								<li><a href="#">Notification 3</a></li>
+								<li><a href="#">Notification 4</a></li>
+								<li><a href="#">Another notification 1</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<p>Sair</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 		
-<!-- 		<ul> -->
-<!-- 			<li ng-repeat="x in names | filter:test">{{ x }}</li> -->
-<!-- 		</ul> -->
-<!-- 	</div> -->
+		<div class="content" ng-view>
 	
-<!-- 	<p>Clicl no cabeçalho e ordena: </p> -->
-	
-<!-- 	<div ng-controller="namesCtrl4"> -->
-<!-- 		<table border="1" width="100%"> -->
-<!-- 			<tr> -->
-<!-- 				<th ng-click="orderByMe('name')">Name</th> -->
-<!-- 				<th ng-click="orderByMe('country')">Country</th> -->
-<!-- 			</tr> -->
-<!-- 			<tr ng-repeat="x in names | orderBy:myOrderBy"> -->
-<!-- 				<td>{{ x.name }}</td> -->
-<!-- 				<td>{{ x.country }}</td> -->
-<!-- 			</tr> -->
-<!-- 		</table> -->
-<!-- 	</div> -->
-
-<!-- <div ng-controller="localizacao"> -->
-<!-- 	<p>O url desta página é: </p> -->
-<!-- 	<h3>{{ myUrl }}</h3> -->
-<!-- 	<h3>{{ myUrl }}</h3> -->
-<!-- </div> -->
-
-<!-- <div ng-controller="controllerTimeOut"> -->
-<!-- 	<p>Timeout services:</p> -->
-<!-- 	<h1>{{ timermsg }}</h1> -->
-<!-- </div> -->
-
-<!-- <div ng-controller="controllerIntervalo"> -->
-<!-- 	<p>O tempo é:</p> -->
-<!-- 	<h1>{{ intervalo }}</h1> -->
-<!-- </div> -->
-
-<!-- <p>Trabalhando com o Servidor 1 </p> -->
-<!-- <button ng-controller="pegarResposta" ng-click="pegarResposta();">Pegar Resposta Servidor</button> -->
-<!-- <input type="text" id="resposta"> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <div ng-controller="namesController"> -->
-<!-- 	<select ng-model="selectedName" ng-options="x for x in names"></select> -->
-<!-- </div> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <div ng-controller="namesController"> -->
-<!-- 	<select> -->
-<!-- 		<option ng-repeat="x in names">{{ x }}</option>} -->
-<!-- 	</select> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <div id="corpo" ng-controller="controllerPessoa"> -->
-<!-- 	<input type="text" ng-value="100" ng-model="codPessoa"> -->
-<!-- 	<hr> -->
-<!-- 	<button ng-click="getPorId()">Buscar por id</button> -->
-<!-- 	<hr> -->
-<!-- 	<button ng-click="getPorTodos()">Buscar Todos</button> -->
-<!-- 	<hr> -->
-<!-- 	<button ng-click="salvarPessoa()">Salvar pessoa</button> -->
-<!-- 	<hr> -->
-<!-- 	<button ng-click="deletarPessoa()">Deletar Pessoa</button> -->
-<!-- 	<hr> -->
-<!-- 	<h1>{{ objetoPessoa }}</h1> -->
-<!-- </div> -->
-
-<!-- <form> -->
-<!-- 	Select a topic: -->
-<!-- 	<select ng-model="myVar"> -->
-<!-- 	<option value="Selecione"></option> -->
-<!-- 	<option value="dogs">Dogs</option> -->
-<!-- 	<option value="tuts">Tutorials</option> -->
-<!-- 	<option value="cars"> Cars</option> -->
-<!-- 	</select> -->
-<!-- </form> -->
-
-<!-- <div ng-switch="myVar"> -->
-<!-- 	<div ng-switch-when="dogs"> -->
-<!-- 		<h1>Dogs</h1> -->
-<!-- 		<p>Selecionou dogs.</p> -->
-<!-- 	</div> -->
-<!-- 	<div ng-switch-when="tuts"> -->
-<!-- 		<h1>Tutorials</h1> -->
-<!-- 		<p>Selecionou Tutorials.</p> -->
-<!-- 	</div> -->
-<!-- 	<div ng-switch-when="cars"> -->
-<!-- 		<h1>Cars</h1> -->
-<!-- 		<p>Selecione cars.</p> -->
-<!-- 	</div> -->
-<!-- </div> -->
-
-<!-- <style type="text/css"> -->
-
-<!-- </style> -->
-
-<!-- <h1>Hide the Div: <input type="checkbox" ng-model="myCheck"></h1> -->
-
-<!-- <div ng-hide="myCheck"> -->
-
-<!-- <input type="text" ng-model="moeda"> -->
-
-<!-- <h2>Moeda default {{ moeda | currency : "$"}}</h2> -->
-
-<!-- <h2>Moeda Real Brasil {{ moeda | currency}}</h2> -->
-
-<!-- <div ng-controller="primeiroUserController"> -->
-<!-- <h1>{{ primeiro }}</h1> -->
-<!-- </div> -->
-
-<!-- <div ng-controller="todosUserController"> -->
-<!-- <h1>{{ todos }}</h1> -->
-<!-- </div> -->
-
-<div>
-	<label>Consulta: <input type="text" ng-model="criteria"></label>
-</div>
-
-<div ng-controller="filterController">
-	<table>
-		<thead>
-			<th>Name</th>
-			<th>Sobrenome</th>
-			<th>Idade</th>
-		</thead>
-		<tbody>
-			<tr ng-repeat="friend in resultadoQtd = (friends | filter: {name:criteria})">
-				<td>{{ friend.name }}</td>
-				<td>{{ friend.lastName }}</td>
-				<td>{{ friend.age }}</td>
-			</tr>
-		</tbody>
-	</table>
-	<h1>Total Resultado: {{ resultadoQtd.length }}</h1>
+		</div>
+	</div>
 </div>
 
 	

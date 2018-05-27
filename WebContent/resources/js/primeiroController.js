@@ -150,7 +150,7 @@ app.factory("UserService", function(){
 //primeiroUserController.$inject = ["$scope", "UserService"];//Inject Angular
 //
 
-app.controller("filterController", function ($scope){
+app.controller("clienteController", function ($scope){
 	$scope.friends = [
 	   {
 		name : "Mario",

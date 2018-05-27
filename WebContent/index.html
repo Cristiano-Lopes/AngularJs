@@ -8,6 +8,7 @@
 <script type="text/javascript" src="resources/script/angular-route.js"></script>
 <script type="text/javascript" src="resources/script/angular-resource.js"></script>
 <script type="text/javascript" src="resources/script/angular-animate.js"></script>
+<script type="text/javascript" src="resources/script/angular-locale_pt-br.js"></script>
 </head>
 <body id="corpo">
 <!-- 	<div ng-controller="personCtrl"> -->
@@ -101,56 +102,52 @@
 <!-- 	<h1>{{ objetoPessoa }}</h1> -->
 <!-- </div> -->
 
-<form>
-	Select a topic:
-	<select ng-model="myVar">
-	<option value="Selecione"></option>
-	<option value="dogs">Dogs</option>
-	<option value="tuts">Tutorials</option>
-	<option value="cars"> Cars</option>
-	</select>
-</form>
+<!-- <form> -->
+<!-- 	Select a topic: -->
+<!-- 	<select ng-model="myVar"> -->
+<!-- 	<option value="Selecione"></option> -->
+<!-- 	<option value="dogs">Dogs</option> -->
+<!-- 	<option value="tuts">Tutorials</option> -->
+<!-- 	<option value="cars"> Cars</option> -->
+<!-- 	</select> -->
+<!-- </form> -->
 
-<div ng-switch="myVar">
-	<div ng-switch-when="dogs">
-		<h1>Dogs</h1>
-		<p>Selecionou dogs.</p>
-	</div>
-	<div ng-switch-when="tuts">
-		<h1>Tutorials</h1>
-		<p>Selecionou Tutorials.</p>
-	</div>
-	<div ng-switch-when="cars">
-		<h1>Cars</h1>
-		<p>Selecione cars.</p>
-	</div>
+<!-- <div ng-switch="myVar"> -->
+<!-- 	<div ng-switch-when="dogs"> -->
+<!-- 		<h1>Dogs</h1> -->
+<!-- 		<p>Selecionou dogs.</p> -->
+<!-- 	</div> -->
+<!-- 	<div ng-switch-when="tuts"> -->
+<!-- 		<h1>Tutorials</h1> -->
+<!-- 		<p>Selecionou Tutorials.</p> -->
+<!-- 	</div> -->
+<!-- 	<div ng-switch-when="cars"> -->
+<!-- 		<h1>Cars</h1> -->
+<!-- 		<p>Selecione cars.</p> -->
+<!-- 	</div> -->
+<!-- </div> -->
+
+<!-- <style type="text/css"> -->
+
+<!-- </style> -->
+
+<!-- <h1>Hide the Div: <input type="checkbox" ng-model="myCheck"></h1> -->
+
+<!-- <div ng-hide="myCheck"> -->
+
+<!-- <input type="text" ng-model="moeda"> -->
+
+<!-- <h2>Moeda default {{ moeda | currency : "$"}}</h2> -->
+
+<!-- <h2>Moeda Real Brasil {{ moeda | currency}}</h2> -->
+
+<div ng-controller="primeiroUserController">
+<h1>{{ primeiro }}</h1>
 </div>
 
-<style type="text/css">
-	
-	div{
-	transition: all linear 1s;
-	background-color: lightblue;
-	height: 100px;
-	width: 100%;
-	position: relative;
-	top: 0;
-	left: 0;
-	}	
-	
-	.ng-hide{
-	height: 0;
-	width: 0;
-	background-color: transparent;
-	top: -200px;
-	left: 200px;
-	}
-</style>
-
-<h1>Hide the Div: <input type="checkbox" ng-model="myCheck"></h1>
-
-<div ng-hide="myCheck">
-	
+<div ng-controller="todosUserController">
+<h1>{{ todos }}</h1>
+</div>
 
 	
 </body>

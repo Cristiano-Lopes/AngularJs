@@ -122,3 +122,30 @@ app.controller("controllerPessoa", function($scope, $resource){
 	};
 });
 
+//criação do service
+app.factory("UserService", function(){
+	var users = ["Ivete", "Alex", "Paulo"];
+	
+	return {
+		all: function(){
+			return users;
+		},
+		primeiro: function(){
+			return users[0];
+		}
+	};
+});
+
+//Criação do Controller
+primeiroUserController = app.controller("primeiroController", function ($scope, UserService){
+	$scope.primeiro = UserService.primeiro();
+});
+
+//segundo controller
+todosUserController = app.controller("todosUserController", function($scope, UserService){
+	$scope.todos = UserService.all();
+});
+
+//ativando injecao de dependencia
+primeiroUserController.$inject = ["$scope", "UserService"];//Inject Angular
+

@@ -141,12 +141,34 @@
 
 <!-- <h2>Moeda Real Brasil {{ moeda | currency}}</h2> -->
 
-<div ng-controller="primeiroUserController">
-<h1>{{ primeiro }}</h1>
+<!-- <div ng-controller="primeiroUserController"> -->
+<!-- <h1>{{ primeiro }}</h1> -->
+<!-- </div> -->
+
+<!-- <div ng-controller="todosUserController"> -->
+<!-- <h1>{{ todos }}</h1> -->
+<!-- </div> -->
+
+<div>
+	<label>Consulta: <input type="text" ng-model="criteria"></label>
 </div>
 
-<div ng-controller="todosUserController">
-<h1>{{ todos }}</h1>
+<div ng-controller="filterController">
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Sobrenome</th>
+			<th>Idade</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="friend in resultadoQtd = (friends | filter: {name:criteria})">
+				<td>{{ friend.name }}</td>
+				<td>{{ friend.lastName }}</td>
+				<td>{{ friend.age }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<h1>Total Resultado: {{ resultadoQtd.length }}</h1>
 </div>
 
 	

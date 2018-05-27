@@ -136,16 +136,45 @@ app.factory("UserService", function(){
 	};
 });
 
-//Criação do Controller
-primeiroUserController = app.controller("primeiroController", function ($scope, UserService){
-	$scope.primeiro = UserService.primeiro();
-});
+////Criação do Controller
+//primeiroUserController = app.controller("primeiroController", function ($scope, UserService){
+//	$scope.primeiro = UserService.primeiro();
+//});
+//
+////segundo controller
+//todosUserController = app.controller("todosUserController", function($scope, UserService){
+//	$scope.todos = UserService.all();
+//});
+//
+////ativando injecao de dependencia
+//primeiroUserController.$inject = ["$scope", "UserService"];//Inject Angular
+//
 
-//segundo controller
-todosUserController = app.controller("todosUserController", function($scope, UserService){
-	$scope.todos = UserService.all();
+app.controller("filterController", function ($scope){
+	$scope.friends = [
+	   {
+		name : "Mario",
+		lastName : "souza",
+		age : 20,
+	   },
+	   
+	   {
+		name : "Maria",
+		lastName : "quermina",
+		age : 89,
+		},
+		
+		{
+		name : "Paulo",
+		lastName : "mineiro",
+		age : 49,
+		},
+		
+		{
+		name : "Vanessa",
+		lastName : "Pereira",
+		age : 22,
+		}
+];
 });
-
-//ativando injecao de dependencia
-primeiroUserController.$inject = ["$scope", "UserService"];//Inject Angular
 
